@@ -1,0 +1,23 @@
+<mujoco model="two_link_arm">
+  <compiler angle="radian"/>
+
+  <option gravity="0 0 0"/>
+
+  <worldbody>
+    <geom size="2 2 0.1" type="plane"/>
+    <body name="link1" pos="0 0 0.2">
+      <joint name="joint1" axis="0 1 0"/>
+      <geom size="0.035 0.25" pos="0 0 0.25" quat="0 1 0 0" type="capsule" mass="1"/>
+      <body name="link2" pos="0 0 0.5">
+        <joint name="joint2" axis="0 1 0"/>
+        <geom size="0.025 0.2" pos="0 0 0.2" quat="0 1 0 0" type="capsule" mass="0.5"/>
+        <site name="end_effector" size="0.04" pos="0 0 0.4"/>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <general name="motor1" joint="joint1" ctrlrange="-30 30"/>
+    <general name="motor2" joint="joint2" ctrlrange="-20 20"/>
+  </actuator>
+</mujoco>

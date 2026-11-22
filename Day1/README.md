@@ -41,7 +41,7 @@ python -c "import sys; print(sys.executable)"
 
 - **目的**：学会从界面定位仿真状态、关节和执行器。
 - **操作**：浏览 File、Option、Simulation、Joint、Control、Watch、Physics、Physical Parameters、Rendering、Visualization 和 Logging。用 Joint、Control 和 Watch 建立界面读数与 `qpos`、`qvel`、`ctrl` 的对应关系。
-- **验收**：已熟悉面板及 Site、Joint、Geom、Actuator 的用途。当前目录保存了 [仿真截图](screenshot.png)。
+- **验收**：已熟悉面板及 Site、Joint、Geom、Actuator 的用途。当前目录保存了 [仿真截图](results/screenshot.png)。
 
 ### 4. 平面正运动学（Forward Kinematics, FK）
 
@@ -122,9 +122,9 @@ embodied_robotics/
 │   ├── two_link_arm.py
 │   ├── forward_kinematics.py
 │   ├── jacobian.py
-│   ├── mjmodel.xml
-│   ├── MJMODEL.TXT
-│   ├── screenshot.png
+│   ├── models/mjmodel.xml
+│   ├── exports/MJMODEL.TXT
+│   ├── results/screenshot.png
 │   └── .vscode/settings.json
 └── Day2/                         # 计划新增
     ├── coordinate_transform.py    # 找回示例后补齐或重写
